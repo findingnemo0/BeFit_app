@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // NOTE: Update this to include the paths to all files that contain Nativewind classes.
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}", "./Frontend/components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
@@ -11,8 +11,22 @@ module.exports = {
         boxfill:'#FEFEFE',
         screenbackground:'#F4F7FB',
         radiusColor:"#EEEEEE",
-      }
+      },
+      fontFamily:{
+            Regular:["Montserrat-Regular"],
+            Medium:["Montserrat-Medium"],
+            Semibold:["Montserrat-SemiBold"],
+      },
+      fontSize:{
+            h1:24,
+            h2:20,
+            title:18,
+            body:16,
+            label:14,
+            caption:12,
+      },
     },
   },
   plugins: [],
 }
+

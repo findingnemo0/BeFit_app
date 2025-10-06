@@ -21,7 +21,7 @@ function TabItem({ label, icon, focused }) {
 
   const inactive = (
     // inactive container
-    <View className="min-h-12 min-w-12 rounded-xl items-center justify-center bg-navigationBackground">
+    <View className="min-h-16 min-w-16 rounded-xl items-center justify-center bg-navigationBackground">
       {/* Icon  */}
       <View>
         <IconComponent.outlined width={32} height={32} />
@@ -47,7 +47,7 @@ export default function _layout() {
           borderColor: "#EEEEEE",
           backgroundColor: "#F4F7FB",
           flexDirection: "row",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           alignItems: "center",
           paddingHorizontal: 8,
         },
