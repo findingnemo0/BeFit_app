@@ -14,6 +14,8 @@ import NotificationFilled from "./notifications_unread_24dp_1D1D1F_FILL1_wght300
 import NotificationOutlined from "./notifications_unread_24dp_1D1D1F_FILL0_wght300_GRAD-25_opsz24.svg";
 import search from "./search_24dp_1D1D1F_FILL1_wght300_GRAD-25_opsz24.svg";
 import sort from "./sort_24dp_1D1D1F_FILL1_wght300_GRAD-25_opsz24.svg";
+import more from "./more_vert_20dp_1D1D1F_FILL1_wght300_GRAD-25_opsz20.svg";
+
 
 //FILL1 means Filled and FILL0 means outlined 
 
@@ -48,4 +50,5 @@ export const Icons = {
         share,
         search,
         sort,
+        more,
 };

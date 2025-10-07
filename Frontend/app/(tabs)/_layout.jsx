@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Stack, Tabs } from "expo-router";
+import { Tabs } from "expo-router";
 import { Icons } from "../../assets/icons/icons.js";
 
 function TabItem({ label, icon, focused }) {
@@ -8,10 +8,10 @@ function TabItem({ label, icon, focused }) {
 
   const active = (
     // active container
-    <View className="flex-row gap-3 min-w-[142px] items-center rounded-xl py-2 px-2 bg-primary">
+    <View className="flex-row gap-3 min-w-[130px] items-center rounded-xl py-2 px-2 bg-primary">
       {/* Icon container */}
       <View className="min-h-8 min-w-8 rounded-lg items-center justify-center bg-boxfill">
-        <IconComponent.filled width={32} height={32} />
+        <IconComponent.filled width={24} height={24} />
       </View>
 
       {/* Label  */}
@@ -21,10 +21,10 @@ function TabItem({ label, icon, focused }) {
 
   const inactive = (
     // inactive container
-    <View className="min-h-16 min-w-16 rounded-xl items-center justify-center bg-navigationBackground">
+    <View className="min-h-12 min-w-12 rounded-xl items-center justify-center bg-navigationBackground">
       {/* Icon  */}
       <View>
-        <IconComponent.outlined width={32} height={32} />
+        <IconComponent.outlined width={24} height={24} />
       </View>
     </View>
   );
@@ -37,24 +37,21 @@ export default function _layout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
           bottom: 40,
           marginHorizontal: 20,
-          height: 64,
+          height: 100,
           borderRadius: 20,
           borderWidth: 2,
-          borderColor: "#EEEEEE",
+          borderColor: "#E2E8F0",
           backgroundColor: "#F4F7FB",
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent:"space-between",
           alignItems: "center",
-          paddingHorizontal: 8,
-        },
-        tabBarItemStyle: {
-          flex: 1, // ensures equal width for each tab
-          alignItems: "center",
-          justifyContent: "center",
+          paddingHorizontal: 12,
+          paddingVertical:12,
         },
       }}
     >
@@ -62,6 +59,7 @@ export default function _layout() {
         name="index"
         options={{
           title: "Home",
+          tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <TabItem label="Home" icon={Icons.home} focused={focused} />
           ),
@@ -71,6 +69,7 @@ export default function _layout() {
         name="explore"
         options={{
           title: "Explore",
+          tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <TabItem label="Explore" icon={Icons.explore} focused={focused} />
           ),
@@ -80,6 +79,7 @@ export default function _layout() {
         name="saved"
         options={{
           title: "Saved",
+          tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <TabItem label="Saved" icon={Icons.bookmarks} focused={focused} />
           ),
@@ -89,6 +89,7 @@ export default function _layout() {
         name="profile"
         options={{
           title: "Profile",
+          tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <TabItem label="Profile" icon={Icons.profile} focused={focused} />
           ),
