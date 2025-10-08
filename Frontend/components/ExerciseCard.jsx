@@ -7,35 +7,31 @@ const ExerciseCard = ({
   equipment = "",
   muscleGroup = "",
   difficultyLevel = "",
-  onPress=()=>{},
+  onPress = () => {},
 }) => {
   return (
     // Exercise card container
     <View 
-        className="w-full bg-red-500"
-        style={{
-            marginHorizontal:16,
-        }}
+      style={{
+        width:"100%",
+        paddingHorizontal:16,
+      }}
     >
-    <TouchableOpacity 
-        className="flex flex-row items-center bg-boxfill h-[88px] w-full px-3 py-3 gap-3"
-        onPress={onPress}
+    <TouchableOpacity
+      className=" flex-row items-center bg-boxfill h-[88px] w-full px-3 py-3 gap-3 rounded-2xl border-[1.5px] border-radiusColor"
+      onPress={onPress}
     >
-      <Image source={images.ExerciseImage} className="size-20 rounded-2xl" />
+      <Image source={images.ExerciseImage} className="size-20 rounded-[10px]" />
 
       {/* Exercise Details container */}
       <View>
         {/* Exercise Name  */}
-        <Text
-          className="font-Medium text-body text-black"
-          numberOfLines={2}
-        >
+        <Text className="font-Medium text-body text-black" numberOfLines={2}>
           {exerciseName}
         </Text>
 
         {/* Tags container */}
         <View className="flex flex-row gap-2">
-
           {/* Muscle Group Tag  */}
           <View>
             <Text className="text-small font-Regular min-h-auto py-1 px-2 rounded-lg border-[1px] border-radiusColor bg-screenbackground ">
@@ -56,9 +52,7 @@ const ExerciseCard = ({
               {difficultyLevel}
             </Text>
           </View>
-
         </View>
-
       </View>
     </TouchableOpacity>
     </View>
