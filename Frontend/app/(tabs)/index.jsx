@@ -3,6 +3,8 @@ import Searchbar from "../../components/Searchbar";
 import Header from "../../components/Header";
 import { Icons } from "@/assets/icons/icons";
 import Footer from "../../components/Footer";
+import ExerciseCard from "../../components/ExerciseCard";
+
 export default function Index() {
   return (
     <View className="flex-1 items-center justify-center bg-screenbackground gap-4">
@@ -21,6 +23,12 @@ export default function Index() {
         showPrimaryCTA={true}
         // onPrimaryPress={()=>}             to naviagte to different screen
         // onSecondaryPress={()=>}           to navigate to different screen
+      />
+      <ExerciseCard
+        exerciseName="Exercise name "
+        equipment="Equipment"
+        muscleGroup="Muscle"
+        difficultyLevel="Difficuly Level"
       />
     </View>
   );
