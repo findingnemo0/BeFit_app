@@ -10,7 +10,7 @@ const Searchbar = ({ placeholder }) => {
         flexDirection:"row",
         alignItems:"center",
         justifyContent:"space-between",
-        Width: "100%",
+        width: "100%",
         paddingHorizontal: 16,
         gap: 12,
       }}
@@ -22,7 +22,7 @@ const Searchbar = ({ placeholder }) => {
           alignItems:"center",
           flex:1,                         // takes all available space
           minHeight: 48,
-          // Width: "100%",
+          width: "100%",
           borderRadius: 12,
           justifyContent:"flex-start",    // adjust the content from starting 
           backgroundColor: "#FEFEFE",

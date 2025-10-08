@@ -2,12 +2,25 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import Searchbar from "./Searchbar";
 import { Icons } from "@/assets/icons/icons";
+import { useNavigation } from '@react-navigation/native';
+
 
 const Header = ({
   title = "",
-  rightSideicon = <Icons.edit width={28} height={28} />,
-  onPress = () =>{},
+  showRightSideIcon = true,
+  rightSideicon = <Icons width={28} height={28} />,
+  showSearchBar = true,
+  searchPlaceholder = " ",
+  onPress = () => {},
 }) => {
+  const navigation = useNavigation();  // this will gives access to navigation methods to navigate between screens
+
+  const handleGoBack = () => {
+    if (navigation.canGoBack()) {      //  only go back if possible , always use this method if the user can go back it will apply else not
+      navigation.goBack();
+    }
+  };
+
   return (
     // Header conatiner
     <View
@@ -25,15 +38,17 @@ const Header = ({
           marginHorizontal: 16,
         }}
       >
-        {/* Icon and Title */}
+        {/* Back and Title container */}
         <View
           className="flex flex-row justify-center items-center"
           style={{
             gap: 12,
           }}
         >
+          
           {/* Back navigation option  */}
           <TouchableOpacity
+            onPress={handleGoBack}  // now , if the user click on the Back icon the user will navigate back to previous screen , only when if the user can go back if its first screen then they won't
             style={{
               minHeight: 48,
               minWidth: 48,
@@ -60,13 +75,14 @@ const Header = ({
         </View>
 
         {/* Rightside Icon (Dynamic) */}
-        <TouchableOpacity onPress={rightSideicon}>
-          {rightSideicon}
-        </TouchableOpacity>
+        {showRightSideIcon && (
+          <TouchableOpacity onPress={onPress}>{rightSideicon}</TouchableOpacity>
+        )}
       </View>
-
       {/* Search Bar  */}
-      <Searchbar placeholder={"search exsercise"} />
+      {showSearchBar && (
+        <Searchbar placeholder={String(searchPlaceholder || " ")} />
+      )}
     </View>
   );
 };
