@@ -12,6 +12,7 @@ module.exports = {
         screenbackground:'#F4F7FB',
         radiusColor:"#EEEEEE",
         mutedgrey:"#E6E6E6",
+        red:"#EF4444",
       },
       fontFamily:{
             Regular:["Montserrat-Regular"],
