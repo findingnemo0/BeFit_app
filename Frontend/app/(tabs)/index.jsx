@@ -1,11 +1,15 @@
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Icons } from "@/assets/icons/icons";
 import { SafeAreaView } from "react-native-safe-area-context";
+import BigBox from "../../components/BigBox";
 
 export default function Index() {
   return (
     <SafeAreaView>
-      <ScrollView className="flex-col mx-5 mt-[20px] ">
+      <ScrollView 
+        className="flex-col mx-5 pt-3"
+        showsVerticalScrollIndicator={false}
+      >
         {/* gloabl container or home page container  */}
         <View className="flex flex-col gap-5">
           {/* heading container */}
@@ -13,25 +17,21 @@ export default function Index() {
             {/* text  */}
             <Text className="font-Medium text-h2">Welcome, Kamal </Text>
 
-              {/* Profile and Notification Icons Container */}
+            {/* Profile and Notification Icons Container */}
             <View className="flex flex-row gap-1">
-              
-            {/* Notification Icon  */}
-            <TouchableOpacity className="h-[36px] w-[36px] bg-boxfill rounded-xl justify-center items-center border-[1.5px] border-radiusColor">
-              <Icons.notification.outlined 
-                width={22} 
-                height={22} 
-                fill="#EF4444"
-              />
-            </TouchableOpacity>
+              {/* Notification Icon  */}
+              <TouchableOpacity className="h-[36px] w-[36px] bg-boxfill rounded-xl justify-center items-center border-[1.5px] border-radiusColor">
+                <Icons.notification.outlined
+                  width={22}
+                  height={22}
+                  fill="#EF4444"
+                />
+              </TouchableOpacity>
 
-            {/* Notification Icon  */}
-            <TouchableOpacity className="h-[36px] w-[36px] bg-boxfill rounded-xl justify-center items-center border-[1.5px] border-radiusColor">
-              <Icons.profile.filled 
-                width={22} 
-                height={22} 
-              />
-            </TouchableOpacity>
+              {/* Notification Icon  */}
+              <TouchableOpacity className="h-[36px] w-[36px] bg-boxfill rounded-xl justify-center items-center border-[1.5px] border-radiusColor">
+                <Icons.profile.filled width={22} height={22} />
+              </TouchableOpacity>
             </View>
           </View>
 
@@ -56,7 +56,7 @@ export default function Index() {
           <View className="flex flex-row justify-between gap-3">
             {/* Programs  */}
             <TouchableOpacity
-              className="bg-boxfill py-4 px-4 rounded-3xl border-radiusColor border-[1.5px] w-full gap-12"
+              className="bg-boxfill py-4 px-4 rounded-3xl border-radiusColor border-[1.5px] w-full gap-14"
               style={{
                 width: "48%",
               }}
@@ -106,7 +106,7 @@ export default function Index() {
 
             {/* Workouts  */}
             <TouchableOpacity
-              className="bg-boxfill py-4 px-4 rounded-3xl border-radiusColor border-[1.5px] w-full gap-12"
+              className="bg-boxfill py-4 px-4 rounded-3xl border-radiusColor border-[1.5px] w-full gap-14"
               style={{
                 width: "48%",
               }}
@@ -154,6 +154,39 @@ export default function Index() {
                 </View>
               </TouchableOpacity>
             </TouchableOpacity>
+          </View>
+          {/* Equipments section  */}
+          <View className="flex flex-col gap-4">
+            <Text className="font-Medium text-h2">
+                Equipment
+            </Text>
+            {/* Equipments Option container  */}
+          <View className="flex-wrap flex-row gap-3 ">
+            <BigBox 
+             title="Dumbbells" 
+             navigateTo=""
+            />
+            <BigBox 
+              title="Barbell" 
+              navigateTo=""
+            />
+            <BigBox 
+              title="Body wight" 
+              navigateTo=""
+            />
+            <BigBox 
+              title="Cable" 
+              navigateTo=""
+            />
+            <BigBox 
+              title="Band" 
+              navigateTo=""
+            />
+            <BigBox 
+              title="Kettlebell" 
+              navigateTo=""
+            />
+          </View>
           </View>
         </View>
       </ScrollView>
