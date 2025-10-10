@@ -2,6 +2,7 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Icons } from "@/assets/icons/icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import BigBox from "../../components/BigBox";
+import MediumBox from "../../components/MediumBox"
 
 export default function Index() {
   return (
