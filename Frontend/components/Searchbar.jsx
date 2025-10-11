@@ -2,7 +2,10 @@ import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import React from "react";
 import { Icons } from "@/assets/icons/icons";
 
-const Searchbar = ({ placeholder }) => {
+const Searchbar = ({ 
+    placeholder, 
+    showFilterIcon=true,
+  }) => {
   return (
     // search bar container contains both search option and filter icon
     <View
@@ -36,7 +39,7 @@ const Searchbar = ({ placeholder }) => {
       </TouchableOpacity>
 
       {/* filter icon container */}
-      <TouchableOpacity
+      {showFilterIcon &&<TouchableOpacity
         style={{
           minHeight: 48,
           minWidth: 48,
@@ -49,7 +52,7 @@ const Searchbar = ({ placeholder }) => {
         }}
       >
         <Icons.sort width={24} height={24} />
-      </TouchableOpacity>
+      </TouchableOpacity>}
     </View>
   );
 };
