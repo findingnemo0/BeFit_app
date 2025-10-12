@@ -3,13 +3,15 @@ import { Icons } from "@/assets/icons/icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import BigBox from "../../components/BigBox";
 
-
 export default function Index() {
   return (
     <SafeAreaView>
-      <ScrollView 
+      <ScrollView
         className="flex-col mx-5 pt-3"
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingBottom: 164,
+        }}
       >
         {/* gloabl container or home page container  */}
         <View className="flex flex-col gap-5">
@@ -158,36 +160,16 @@ export default function Index() {
           </View>
           {/* Equipments section  */}
           <View className="flex flex-col gap-4">
-            <Text className="font-Medium text-h2">
-                Equipment
-            </Text>
+            <Text className="font-Medium text-h2">Equipment</Text>
             {/* Equipments Option container  */}
-          <View className="flex-wrap flex-row gap-3 ">
-            <BigBox 
-             title="Dumbbells" 
-             navigateTo=""
-            />
-            <BigBox 
-              title="Barbell" 
-              navigateTo=""
-            />
-            <BigBox 
-              title="Body wight" 
-              navigateTo=""
-            />
-            <BigBox 
-              title="Cable" 
-              navigateTo=""
-            />
-            <BigBox 
-              title="Band" 
-              navigateTo=""
-            />
-            <BigBox 
-              title="Kettlebell" 
-              navigateTo=""
-            />
-          </View>
+            <View className="flex-wrap flex-row gap-3 ">
+              <BigBox title="Dumbbells" navigateTo="" />
+              <BigBox title="Barbell" navigateTo="" />
+              <BigBox title="Body wight" navigateTo="" />
+              <BigBox title="Cable" navigateTo="" />
+              <BigBox title="Band" navigateTo="" />
+              <BigBox title="Kettlebell" navigateTo="" />
+            </View>
           </View>
         </View>
       </ScrollView>
