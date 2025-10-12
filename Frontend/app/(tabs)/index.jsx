@@ -2,6 +2,7 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Icons } from "@/assets/icons/icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import BigBox from "../../components/BigBox";
+import ExerciseCard from "../../components/ExerciseCard";
 
 export default function Index() {
   return (
@@ -10,7 +11,7 @@ export default function Index() {
         className="flex-col mx-5 pt-3"
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
-          paddingBottom: 164,
+          paddingBottom: 108,
         }}
       >
         {/* gloabl container or home page container  */}
@@ -159,10 +160,10 @@ export default function Index() {
             </TouchableOpacity>
           </View>
           {/* Equipments section  */}
-          <View className="flex flex-col gap-4">
+          <View className="flex flex-col gap-3">
             <Text className="font-Medium text-h2">Equipment</Text>
             {/* Equipments Option container  */}
-            <View className="flex-wrap flex-row gap-3 ">
+            <View className="flex-wrap flex-row justify-between gap-3 ">
               <BigBox title="Dumbbells" navigateTo="" />
               <BigBox title="Barbell" navigateTo="" />
               <BigBox title="Body wight" navigateTo="" />
@@ -171,6 +172,11 @@ export default function Index() {
               <BigBox title="Kettlebell" navigateTo="" />
             </View>
           </View>
+          <ExerciseCard/>
+          <ExerciseCard/>
+          <ExerciseCard/>
+          <ExerciseCard/>
+          <ExerciseCard/>
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -3,10 +3,10 @@ import React from "react";
 import { images } from "../assets/images/images.js";
 
 const ExerciseCard = ({
-  exerciseName = "",
-  equipment = "",
-  muscleGroup = "",
-  difficultyLevel = "",
+  exerciseName = "exercise name",
+  equipment = "equipment",
+  muscleGroup = "muscle",
+  difficultyLevel = "difficulty",
   onPress = () => {},
 }) => {
   return (
@@ -14,14 +14,13 @@ const ExerciseCard = ({
     <View 
       style={{
         width:"100%",
-        paddingHorizontal:16,
       }}
     >
     <TouchableOpacity
-      className=" flex-row items-center bg-boxfill h-[88px] w-full px-3 py-3 gap-3 rounded-2xl border-[1.5px] border-radiusColor"
+      className=" flex-row items-center bg-boxfill h w-full px-3 py-3 gap-3 rounded-2xl border-[2px] border-radiusColor"
       onPress={onPress}
     >
-      <Image source={images.ExerciseImage} className="size-20 rounded-[10px]" />
+      <Image source={images.ExerciseImage} className="size-20 rounded-[8px]" />
 
       {/* Exercise Details container */}
       <View>
