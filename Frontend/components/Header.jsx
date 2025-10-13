@@ -35,7 +35,7 @@ const Header = ({
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
-          marginHorizontal: 16,
+          paddingHorizontal: 16,
         }}
       >
         {/* Back and Title container */}
@@ -81,7 +81,7 @@ const Header = ({
       </View>
       {/* Search Bar  */}
       {showSearchBar && (
-        <Searchbar placeholder={String(searchPlaceholder || " ")} />
+        <Searchbar placeholder={String(searchPlaceholder)} />
       )}
     </View>
   );

@@ -1,14 +1,17 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { router } from "expo-router"; 
+
+
 const BigBox = ({
-  title = " ",
+  title = "Box Title",
   isSelectable = false, // if true it will acts like a filter toggle
   isActiveInitially = false, // initial state for toogle mode
-  navigateTo = " ", // screen name to navigate , used only if not selectable
+  navigateTo ="/Equipment/equipmentScreen", // screen name to navigate , used only if not selectable
   onSelect = () => {}, // callback for parent when slected
 }) => {
-  const navigation = useNavigation();
+  
   const [isActive, setIsActive] = useState(isActiveInitially);
 
   const handlePress = () => {
@@ -18,7 +21,10 @@ const BigBox = ({
       onSelect(title, !isActive);
     } else if (navigateTo) {
       // navigate to other screen
-      navigation.navigate(navigateTo);
+      router.push({
+        pathname: navigateTo,
+        params:{equipmentName:title}
+      });
     }
   };
 

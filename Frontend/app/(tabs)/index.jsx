@@ -164,12 +164,12 @@ export default function Index() {
             <Text className="font-Medium text-h2">Equipment</Text>
             {/* Equipments Option container  */}
             <View className="flex-wrap flex-row justify-between gap-3 ">
-              <BigBox title="Dumbbells" navigateTo="" />
-              <BigBox title="Barbell" navigateTo="" />
-              <BigBox title="Body wight" navigateTo="" />
-              <BigBox title="Cable" navigateTo="" />
-              <BigBox title="Band" navigateTo="" />
-              <BigBox title="Kettlebell" navigateTo="" />
+              <BigBox title="Dumbbells"/>
+              <BigBox title="Barbell"/>
+              <BigBox title="Body wight"/>
+              <BigBox title="Cable"/>
+              <BigBox title="Band"/>
+              <BigBox title="Kettlebell"/>
             </View>
           </View>
           <ExerciseCard/>

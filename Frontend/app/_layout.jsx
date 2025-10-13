@@ -30,7 +30,7 @@ export default function RootLayout() {
         }}
       />
       <Stack.Screen
-        name="exerciseType"
+        name="Equipment"
         options={{
           headerShown: false,
         }}
