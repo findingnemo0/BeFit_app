@@ -163,13 +163,31 @@ export default function Index() {
           <View className="flex flex-col gap-3">
             <Text className="font-Medium text-h2">Equipment</Text>
             {/* Equipments Option container  */}
-            <View className="flex-wrap flex-row justify-between gap-3 ">
-              <BigBox title="Dumbbells"/>
-              <BigBox title="Barbell"/>
-              <BigBox title="Body wight"/>
-              <BigBox title="Cable"/>
-              <BigBox title="Band"/>
-              <BigBox title="Kettlebell"/>
+            <View className="flex-wrap flex-row justify-between gap-3">
+              <BigBox 
+                title="Dumbbells"
+                width={"48%"}
+              />
+              <BigBox 
+                title="Barbell"
+                width={"48%"}
+              />
+              <BigBox 
+                title="Body wight"
+                width={"48%"}
+              />
+              <BigBox 
+                title="Cable"
+                width={"48%"}
+              />
+              <BigBox 
+                title="Band"
+                width={"48%"}
+              />
+              <BigBox 
+                title="Kettlebell"
+                width={"48%"}
+              />
             </View>
           </View>
           <ExerciseCard/>

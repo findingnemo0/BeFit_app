@@ -28,7 +28,7 @@ const Equipment = ({}) => {
               Muscle Group
             </Text>
             {/* muscle container  */}
-            <View>
+            <View className="flex-wrap flex-row gap-3">
               <BigBox
                 title="Biceps"
                 isSelectable={true}

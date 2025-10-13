@@ -46,27 +46,33 @@ const explore = () => {
             <View className="flex-row justify-between flex-wrap gap-3">
               <BigBox
                 title="Muscle" 
-              navigateTo=""
+                navigateTo=""
+                width={"48%"}
               />
               <BigBox
                 title="Strength" 
-              navigateTo=""
+                navigateTo=""
+                width={"48%"}
               />
               <BigBox
                 title="Stamina" 
-              navigateTo=""
+                navigateTo=""
+                width={"48%"}
               />
               <BigBox
                 title="Cardio" 
-              navigateTo=""
+                navigateTo=""
+                width={"48%"}
               />
               <BigBox
                 title="Calisthenics" 
-              navigateTo=""
+                navigateTo=""
+                width={"48%"}
               />
               <BigBox
                 title="Fat Burning" 
-              navigateTo=""
+                navigateTo=""
+                width={"48%"}
               />
             </View>
           </View>
