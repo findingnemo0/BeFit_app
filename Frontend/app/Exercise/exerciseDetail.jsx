@@ -5,6 +5,7 @@ import Header from "../../components/Header"
 import SmallBox from '../../components/SmallBox';
 import { images } from "../../assets/images/images.js";
 import TargetMuscle from '../../components/TargetMuscle.jsx';
+import CTA from '../../components/CTA.jsx';
 
 
 
@@ -62,8 +63,20 @@ const ExerciseDetail = () => {
           navigateTo=""
         />
       </View>
+       {/* Target Muscle component section  */}
         <TargetMuscle/>
+
+        {/* Footer section */}
+        <View>
+            <CTA
+                title="Start Exercise"
+                navigateTo=""
+                isActive={false}
+            />
+        </View>
+
       </View>
+
     </SafeAreaView>
   )
 }
