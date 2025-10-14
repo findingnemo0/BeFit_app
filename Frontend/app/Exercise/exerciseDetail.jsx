@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from "../../components/Header"
 import SmallBox from '../../components/SmallBox';
 import { images } from "../../assets/images/images.js";
+import TargetMuscle from '../../components/TargetMuscle.jsx';
 
 
 
@@ -61,17 +62,7 @@ const ExerciseDetail = () => {
           navigateTo=""
         />
       </View>
-        {/* Target Muscle Illustartion section  */}
-        <View>
-            <Text className="font-Medium text-title">Target Muscle</Text>
-            <Image
-            source={images.Back_Shoulders}
-            className="h-36 w-full"
-            style={{
-              backgroundColor:"red"
-            }}
-            />
-        </View>
+        <TargetMuscle/>
       </View>
     </SafeAreaView>
   )
