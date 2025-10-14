@@ -196,11 +196,49 @@ export default function Index() {
               />
             </View>
           </View>
-          <ExerciseCard/>
-          <ExerciseCard/>
-          <ExerciseCard/>
-          <ExerciseCard/>
-          <ExerciseCard/>
+          <ExerciseCard
+            exerciseName="Dumbbell Press"
+            equipment="Dumbbell"
+            muscleGroup="Biceps"
+            difficultyLevel="Intermediate"
+          />
+          <ExerciseCard
+            exerciseName="Chest Press"
+            equipment="Barbell"
+            muscleGroup="Chest"
+            difficultyLevel="Beginner"
+          />
+          <ExerciseCard
+            exerciseName="Deadlift"
+            equipment="Barbell"
+            muscleGroup="Back"
+            difficultyLevel="Intermediate"
+          /><ExerciseCard
+            exerciseName="Squats"
+            equipment="Barbell"
+            muscleGroup="Legs"
+            difficultyLevel="Intermediate"
+          /><ExerciseCard
+            exerciseName="Chin ups"
+            equipment="Body Weight"
+            muscleGroup="Biceps"
+            difficultyLevel="Intermediate"
+          /><ExerciseCard
+            exerciseName="Push ups"
+            equipment="Body Weight"
+            muscleGroup="Chest"
+            difficultyLevel="Beginner"
+          /><ExerciseCard
+            exerciseName="Overhead Extension"
+            equipment="Dumbbell"
+            muscleGroup="Triceps"
+            difficultyLevel="Intermediate"
+          /><ExerciseCard
+            exerciseName="Arnold Press"
+            equipment="Dumbbell"
+            muscleGroup="Shoulders"
+            difficultyLevel="Advanced"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

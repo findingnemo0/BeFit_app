@@ -9,7 +9,6 @@ const ExerciseCard = ({
   equipment = "equipment",
   muscleGroup = "muscle",
   difficultyLevel = "difficulty",
-  onPress = () => {},
   navigateTo ="Exercise/exerciseDetail",
 }) => {
 
@@ -19,7 +18,12 @@ const ExerciseCard = ({
   const handlePress = () => {
     router.push({
       pathname: navigateTo,
-      params: { exerciseName }, // send the selected exercise name
+      params: {
+        exerciseName,
+        equipment,
+        muscleGroup,
+        difficultyLevel,
+      }, // send the selected exercise name
     });
   };
 
