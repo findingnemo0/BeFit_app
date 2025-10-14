@@ -1,6 +1,8 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { images } from "../assets/images/images.js";
+import { useRouter } from "expo-router"; 
+
 
 const ExerciseCard = ({
   exerciseName = "exercise name",
@@ -8,7 +10,19 @@ const ExerciseCard = ({
   muscleGroup = "muscle",
   difficultyLevel = "difficulty",
   onPress = () => {},
+  navigateTo ="Exercise/exerciseDetail",
 }) => {
+
+  const router = useRouter(); // ✅ initialize router
+
+   // ✅ handle press
+  const handlePress = () => {
+    router.push({
+      pathname: navigateTo,
+      params: { exerciseName }, // send the selected exercise name
+    });
+  };
+
   return (
     // Exercise card container
     <View 
@@ -18,7 +32,7 @@ const ExerciseCard = ({
     >
     <TouchableOpacity
       className=" flex-row items-center bg-boxfill h w-full px-3 py-3 gap-3 rounded-2xl border-[2px] border-radiusColor"
-      onPress={onPress}
+      onPress={handlePress}
     >
       <Image source={images.ExerciseImage} className="size-20 rounded-[8px]" />
 

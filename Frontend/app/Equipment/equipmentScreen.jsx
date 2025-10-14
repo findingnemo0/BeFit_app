@@ -5,7 +5,7 @@ import { useLocalSearchParams } from "expo-router";
 import Header from "../../components/Header"
 import { Icons } from "@/assets/icons/icons";
 import BigBox from "../../components/BigBox"
-
+import ExerciseCard from "../../components/ExerciseCard"
 
 const Equipment = ({}) => {
   const { equipmentName } = useLocalSearchParams(); // read passed equipment , it will show the title of selected equipment option
@@ -20,10 +20,12 @@ const Equipment = ({}) => {
           showSearchBar={false}
         />
         {/* Main Container || contains all content except header */}
-      <View className="mx-5">
-      <ScrollView>
+      <View className="flex mx-5">
+      <ScrollView 
+          showsVerticalScrollIndicator={false}
+      >
           {/* Muscle group section  */}
-          <View className="flex-col">
+          <View className="flex-col gap-3">
             <Text className="font-Medium text-title">
               Muscle Group
             </Text>
@@ -62,6 +64,61 @@ const Equipment = ({}) => {
                 isSelectable={true}
               />
             </View>
+          </View>
+
+          {/* Difficulty level section  */}
+          <View className="flex-col gap-3">
+            <Text className="font-Medium text-title">
+              Difficulty Level
+            </Text>
+            {/* level container  */}
+            <View className="flex-wrap flex-row gap-3">
+              <BigBox
+                title="Beginner"
+                isSelectable={true}
+                padding={"12"}
+              />
+              <BigBox
+                title="Intermediate"
+                isSelectable={true}
+                padding={"12"}
+              />
+              <BigBox
+                title="Advanced"
+                isSelectable={true}
+                padding={"12"}
+              />
+            </View>
+          </View>
+
+          {/* Exercise List section */}
+          <View className="flex gap-3">
+              <Text className="font-Medium text-title">Exercise List</Text>
+              {/* List  */}
+              <View className="flex flex-col gap-3">
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+                  <ExerciseCard/>
+              </View>
           </View>
       </ScrollView>
       </View>

@@ -2,16 +2,16 @@ import { View, Text } from 'react-native'
 import { useLocalSearchParams } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+const MuscleFocusScreen = () => {
 
-const ExerciseDetail = () => {
-
-  const { exerciseName } = useLocalSearchParams(); // ✅ get passed params
+  const { title } = useLocalSearchParams(); // ✅ get passed params
 
   return (
     <SafeAreaView>
-      <Text>This page is for exerciseDetail {exerciseName}</Text>
+      <Text>muscleFocusScreen</Text>
+      <Text>selected Muscle {title}</Text>
     </SafeAreaView>
   )
 }
 
-export default ExerciseDetail
+export default MuscleFocusScreen

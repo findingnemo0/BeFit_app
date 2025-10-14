@@ -167,26 +167,32 @@ export default function Index() {
               <BigBox 
                 title="Dumbbells"
                 width={"48%"}
+                navigateTo="/Equipment/equipmentScreen"
               />
               <BigBox 
                 title="Barbell"
                 width={"48%"}
+                navigateTo="/Equipment/equipmentScreen"
               />
               <BigBox 
-                title="Body wight"
+                title="Body weight"
                 width={"48%"}
+                navigateTo="/Equipment/equipmentScreen"
               />
               <BigBox 
                 title="Cable"
                 width={"48%"}
+                navigateTo="/Equipment/equipmentScreen"
               />
               <BigBox 
                 title="Band"
                 width={"48%"}
+                navigateTo="/Equipment/equipmentScreen"
               />
               <BigBox 
                 title="Kettlebell"
                 width={"48%"}
+                navigateTo="/Equipment/equipmentScreen"
               />
             </View>
           </View>

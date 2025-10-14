@@ -1,12 +1,10 @@
-import { View, Text, TouchableOpacity,Image, ImageBackground } from 'react-native'
+import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import React from 'react'
 import { images } from '../assets/images/images'
-import { useNavigation } from "@react-navigation/native";
+import { useRouter } from "expo-router";
 
 
 const MuscleGroup = () => {
-
-    const navigation = useNavigation();
 
     const Muscle = [
     {title:"Biceps", bgImage:images.Biceps},
@@ -18,6 +16,15 @@ const MuscleGroup = () => {
     {title:"Forearms", bgImage:images.Forearms},
     {title:"Core", bgImage:images.Core},
 ]
+    const router = useRouter();
+
+    const handlePress = (title) => {
+    router.push({
+      pathname: "MuscleFocus/muscleFocusScreen", // ✅ relative path (no / at start)
+      params: { title },
+    });
+  };
+
   return (
 
     // all muscle group contaier 
@@ -31,6 +38,7 @@ const MuscleGroup = () => {
                 overflow:"hidden",
                 borderRadius:16,
             }}
+        onPress={() => handlePress(Muscle.title)} // ✅ navigate with params
     >
         <ImageBackground
             source={Muscle.bgImage}

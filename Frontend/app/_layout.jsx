@@ -35,6 +35,18 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="Exercise"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="MuscleFocus"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
