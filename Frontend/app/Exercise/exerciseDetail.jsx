@@ -36,7 +36,7 @@ const ExerciseDetail = () => {
   }, [reps]);
 
   const { exerciseName, equipment, muscleGroup, difficultyLevel } =
-    useLocalSearchParams();
+  useLocalSearchParams();
 
   return (
     <SafeAreaView className="flex-1">
@@ -83,7 +83,7 @@ const ExerciseDetail = () => {
           </View>
 
           {/* Target Muscle component section  */}
-          <TargetMuscle />
+          <TargetMuscle muscleGroup={muscleGroup} />
 
           {/* Counter component section */}
           {exerciseStarted && (

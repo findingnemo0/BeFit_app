@@ -7,6 +7,9 @@ const BigBox = ({
   isActiveInitially = false, // initial state for toogle mode
   navigateTo = " ", // screen name to navigate , used only if not selectable
   onSelect = () => {}, // callback for parent when slected
+  width = null,
+  padding = null,
+  height= null,
 }) => {
   const navigation = useNavigation();
   const [isActive, setIsActive] = useState(isActiveInitially);
@@ -26,7 +29,8 @@ const BigBox = ({
     <TouchableOpacity
       onPress={handlePress}
       style={{
-        width: "48%",
+        width: width || "auto", // use prop if provided, else auto
+        paddingHorizontal:padding || 12,  // optional padding with prop
         height: 36,
         backgroundColor: isActive ? "#1D1D1F" : "#FEFEFE",
         borderRadius: 12,

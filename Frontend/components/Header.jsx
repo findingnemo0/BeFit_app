@@ -11,6 +11,7 @@ const Header = ({
   rightSideicon = <Icons width={28} height={28} />,
   showSearchBar = true,
   searchPlaceholder = " ",
+  titleColor = "#000",
   onPress = () => {},
 }) => {
   const navigation = useNavigation();  // this will gives access to navigation methods to navigate between screens
@@ -66,6 +67,7 @@ const Header = ({
           {/* Title  */}
           <Text
             style={{
+              color: titleColor,
               fontSize: 20,
               fontFamily: "Montserrat-Medium",
             }}
