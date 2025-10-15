@@ -15,12 +15,12 @@ const MuscleFocusScreen = ({}) => {
 
 
   const muscleBackgroundImage = {
-      Core:images.Core,
+      Abs:images.Core,
       Chest:images.Chest,
       Back:images.Back,
       Biceps:images.Biceps,
       Triceps:images.Triceps,
-      Shoulder:images.Shoulder,
+      Shoulders:images.Shoulder,
       Legs:images.Legs,
       Forearms:images.Forearms,
   }

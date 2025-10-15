@@ -10,11 +10,11 @@ const MuscleGroup = () => {
     {title:"Biceps", bgImage:images.Biceps},
     {title:"Triceps", bgImage:images.Triceps},
     {title:"Chest", bgImage:images.Chest},
-    {title:"Shoulder", bgImage:images.Shoulder},
+    {title:"Shoulders", bgImage:images.Shoulder},
     {title:"Back", bgImage:images.Back},
     {title:"Legs", bgImage:images.Legs},
     {title:"Forearms", bgImage:images.Forearms},
-    {title:"Core", bgImage:images.Core},
+    {title:"Abs", bgImage:images.Core},
 ]
     const router = useRouter();
 

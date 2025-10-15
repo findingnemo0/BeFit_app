@@ -39,6 +39,10 @@ const TargetMuscle = ({
       front:images.Front_Forearms,
       back:images.Back_Forearms,
     },
+    Default: { 
+      front: images.Front_none, 
+      back: images.Back_none 
+    },
   }
 
   const selectedImages = muscleImage[muscleGroup] || muscleImage.Default;

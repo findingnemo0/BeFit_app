@@ -15,12 +15,38 @@ const ExerciseList = ({
     <View>
       {showLable && (<Text>This component is for ExerciseList{label}</Text>)}
       <Text>{title}</Text>
-      <ExerciseCard/>
-      <ExerciseCard/>
-      <ExerciseCard/>
-      <ExerciseCard/>
-      <ExerciseCard/>
-      <ExerciseCard/>
+      <ExerciseCard
+      />
+      <ExerciseCard
+        exerciseName="Arnold Press"
+            equipment="Dumbbell"
+            muscleGroup="Shoulders"
+            difficultyLevel="Advanced"
+      />
+      <ExerciseCard
+        exerciseName="Arnold Press"
+            equipment="Dumbbell"
+            muscleGroup="Shoulders"
+            difficultyLevel="Advanced"
+      />
+      <ExerciseCard
+        exerciseName="Arnold Press"
+            equipment="Dumbbell"
+            muscleGroup="Shoulders"
+            difficultyLevel="Advanced"
+      />
+      <ExerciseCard
+        exerciseName="Arnold Press"
+            equipment="Dumbbell"
+            muscleGroup="Shoulders"
+            difficultyLevel="Advanced"
+      />
+      <ExerciseCard
+        exerciseName="Arnold Press"
+            equipment="Dumbbell"
+            muscleGroup="Shoulders"
+            difficultyLevel="Advanced"
+      />
     </View>
   )
 }
