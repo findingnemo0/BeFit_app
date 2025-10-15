@@ -1,21 +1,31 @@
 import { View, Text, Image } from 'react-native'
 import { images } from '../assets/images/images'
 
-const TargetMuscle = () => {
+const TargetMuscle = ({
+  muscleGroup="",
+}) => {
+
+  const muscleImage ={
+    Back:{
+      front:images.Front_none,
+      back:images.Back_back,
+    }
+  }
+
   return (
              /* Target Muscle Illustartion section  */
         <View className="flex gap-3">
             <Text className="font-Medium text-title">Target Muscle</Text>
             {/* Muscle Container  */}
-          <View className="flex flex-row justify-between">
+          <View className="flex flex-row justify-center">
             <Image
             source={images.Front_Shoulders}
-            className="h-72"
+            className="h-60"
             resizeMode="contain"
             />
             <Image
             source={images.Back_Shoulders}
-            className="h-72"
+            className="h-60"
             resizeMode="contain"
             />
           </View>

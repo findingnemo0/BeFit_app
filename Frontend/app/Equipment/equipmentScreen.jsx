@@ -19,18 +19,19 @@ const Equipment = ({}) => {
           searchPlaceholder="search band exercise"
           showSearchBar={false}
         />
-        {/* Main Container || contains all content except header */}
-      <View className="flex mx-5">
+        
       <ScrollView 
           showsVerticalScrollIndicator={false}
       >
+        {/* Main Container || contains all content except header */}
+        <View className="mx-5 flex-col gap-4">
           {/* Muscle group section  */}
-          <View className="flex-col gap-3">
+          <View className="flex-col gap-2">
             <Text className="font-Medium text-title">
               Muscle Group
             </Text>
             {/* muscle container  */}
-            <View className="flex-wrap flex-row gap-3">
+            <View className="flex-wrap flex-row gap-2">
               <BigBox
                 title="Biceps"
                 isSelectable={true}
@@ -41,7 +42,7 @@ const Equipment = ({}) => {
               />
               <BigBox
                 title="Foreamrs"
-                isSelectable={true}
+                isSelectable={true}   
               />
               <BigBox
                 title="Abs"
@@ -67,7 +68,7 @@ const Equipment = ({}) => {
           </View>
 
           {/* Difficulty level section  */}
-          <View className="flex-col gap-3">
+          <View className="flex-col gap-2">
             <Text className="font-Medium text-title">
               Difficulty Level
             </Text>
@@ -92,7 +93,7 @@ const Equipment = ({}) => {
           </View>
 
           {/* Exercise List section */}
-          <View className="flex gap-3">
+          <View className="flex gap-2">
               <Text className="font-Medium text-title">Exercise List</Text>
               {/* List  */}
               <View className="flex flex-col gap-3">
@@ -120,8 +121,8 @@ const Equipment = ({}) => {
                   <ExerciseCard/>
               </View>
           </View>
+          </View>
       </ScrollView>
-      </View>
     </SafeAreaView>
   );
 };

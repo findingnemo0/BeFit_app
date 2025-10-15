@@ -22,7 +22,6 @@ const Footer = ({
             backgroundColor:"#EDF2F7",
             borderTopWidth:1.5,
             borderColor:"#EEEEEE",
-            marginHorizontal: 16,
             paddingHorizontal:16,
         }}
     >

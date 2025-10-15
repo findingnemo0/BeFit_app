@@ -14,13 +14,14 @@ const CTA = ({
 
      // ✅ handle press
   const handlePress = () => {
-    router.push({
-      pathname: navigateTo,
-      params: {
-        title,
-      }, // send the selected exercise name
-    });
-  };
+    if (onPress) onPress(); // call parent callback
+    if (navigateTo) {
+        router.push({
+            pathname: navigateTo,
+            params: { title },
+        });
+    }
+};
 
   return (
     <TouchableOpacity
@@ -35,7 +36,7 @@ const CTA = ({
         }} 
     >
         <Text 
-            className="font-Medium text-title text-white"
+            className="font-Medium text-title"
             style={{
             color: isActive ? "#FFFFFF" : "#1D1D1F",
             }}

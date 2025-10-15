@@ -32,7 +32,7 @@ const SmallBox = ({
       style={{
         width: width || "auto",
         paddingHorizontal: padding || 14,
-        height: 28,
+        height: 30,
         backgroundColor: isActive ? "#1D1D1F" : "#FEFEFE",
         borderRadius: 6,
         borderColor: isActive ? "#1D1D1F" : "#EEEEEE",
