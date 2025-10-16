@@ -1,10 +1,11 @@
-import { View, Text, ScrollView, Dimensions } from "react-native";
+import { View, Text, Image, ScrollView, Dimensions, TouchableOpacity } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Seachbar from "../../components/Searchbar"
 import MuscleGroup from "../../components/MuscleGroup";
 import { images } from "../../assets/images/images";
 import BigBox from "../../components/BigBox";
+import CTA from "../../components/CTA";
 import RecommendedForYouCard from "../../components/RecommendedForYouCard";
 const { width } = Dimensions.get("window");
 
@@ -46,7 +47,7 @@ const explore = () => {
             <View className="flex-row justify-between flex-wrap gap-3">
               <BigBox
                 title="Muscle" 
-                navigateTo=""
+                navigateTo="/Category/category"
                 width={"48%"}
               />
               <BigBox
@@ -95,6 +96,32 @@ const explore = () => {
             <RecommendedForYouCard title="Yog" width={width * 0.72}/>
           </ScrollView>
           </View>
+
+          {/* Exercise Library Section  */}
+          <View className="flex-col gap-3">
+            <Text className="font-Medium text-h2">
+              Exercise Library
+            </Text>
+            
+            {/* Image  */}
+
+            <View className="flex1">
+              <Image 
+                source={images.ExerciseLibrary} 
+                resizeMethod="cover"
+                className="h-40 w-full rounded-2xl"
+              />
+            </View>
+
+            {/* CTA  */}
+            <CTA
+              isActive={true}
+              title="Explore Library"
+              navigateTo=""
+            />
+
+          </View>
+
         </View>
         </ScrollView>
       </SafeAreaView>
@@ -102,5 +129,3 @@ const explore = () => {
 };
 
 export default explore;
-
-

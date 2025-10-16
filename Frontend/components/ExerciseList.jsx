@@ -5,16 +5,20 @@ import ExerciseCard from "../components/ExerciseCard"
 
 
 const ExerciseList = ({
-    label="",
+    label="Exercise List",
     showLable=true,
+    showTitle=true,
 }) => {
 
     const { title } = useLocalSearchParams();
 
   return (
     <View>
-      {showLable && (<Text>This component is for ExerciseList{label}</Text>)}
-      <Text>{title}</Text>
+      {showLable && (<Text className="font-Medium text-title ">{label}</Text>)}
+      {showTitle && (<Text className="font-Medium text-title ">{title}</Text>)}
+
+      {/* Exercise List Section  */}
+      <View className="flex-col gap-3">
       <ExerciseCard
       />
       <ExerciseCard
@@ -47,6 +51,7 @@ const ExerciseList = ({
             muscleGroup="Shoulders"
             difficultyLevel="Advanced"
       />
+      </View>
     </View>
   )
 }

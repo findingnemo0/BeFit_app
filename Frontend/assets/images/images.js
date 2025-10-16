@@ -20,6 +20,7 @@ import Back_Legs from "./Back_Legs.png"
 import Back_Shoulders from "./Back_Shoulders.png"
 import Back_Triceps from "./Back_Triceps.png"
 import Back_none from "./Back_none.png"
+import ExerciseLibrary from "./ExerciseLibraryImage.png"
 
 
 export const images ={
@@ -45,4 +46,5 @@ export const images ={
     Back_Triceps,
     Back_Legs,
     Back_none,
+    ExerciseLibrary,
 }

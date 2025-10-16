@@ -111,7 +111,7 @@ const MuscleFocusScreen = ({}) => {
             <TouchableOpacity 
               className="flex-1 justify-center items-center border-b-2 py-1"
               style={{
-                borderColor: activeTab === "ExerciseList" ? "#1D1D1F" : "#ECEDEE",
+                borderColor: activeTab === "ExerciseList" ? "#1D1D1F" : "#B6B4B4",
               }}
               onPress={() => setActiveTab("ExerciseList")}
             >
@@ -128,7 +128,7 @@ const MuscleFocusScreen = ({}) => {
             <TouchableOpacity 
               className="flex-1 justify-center items-center border-b-2 py-1"
               style={{
-                borderColor: activeTab === "TargetMuscle" ? "#1D1D1F" : "#ECEDEE",
+                borderColor: activeTab === "TargetMuscle" ? "#1D1D1F" : "#B6B4B4",
               }}
               onPress={() => setActiveTab("TargetMuscle")}
             >
