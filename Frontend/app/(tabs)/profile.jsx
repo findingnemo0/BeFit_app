@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import AppSettingCard from '../../components/AppSettingCard'
 import { Icons } from '../../assets/icons/icons'
 import CTA from '../../components/CTA'
+import ProfileCard from '../../components/ProfileCard'
 
 const Profile = () => {
   return (
@@ -12,7 +13,35 @@ const Profile = () => {
          showsVerticalScrollIndicator={false}
       >
         {/* Main Container  */}
-        <View className="mx-5 bg-red">
+        <View className="mx-5 gap-4 mt-3">
+
+          {/* Profile Highlight Cards section */}
+          <View className="flex-row flex-wrap justify-between gap-3 bg-red">
+              <ProfileCard
+                  title='Gender'
+                  value='Male'
+                  icon={Icons.gender.male}
+                  // width={"48%"}
+              />
+              <ProfileCard
+                  title='Gender'
+                  value='Male'
+                  icon={Icons.gender.male}
+                  // width={"48%"}
+              />
+              <ProfileCard
+                  title='Gender'
+                  value='Male'
+                  icon={Icons.gender.male}
+                  // width={"48%"}
+              />
+              <ProfileCard
+                  title='Gender'
+                  value='Male'
+                  icon={Icons.gender.male}
+                  // width={"48%"}
+              />
+          </View>
 
           {/* CTA's section  */}
           <View className="flex-col gap-2">
@@ -28,7 +57,7 @@ const Profile = () => {
           </View>
 
           {/* App Setting section  */}
-          <View className="flex-col gap-4">
+          <View className="flex-col gap-3">
             <Text className="font-Medium text-h2">
                 App Setting
             </Text>
