@@ -8,7 +8,7 @@ import TargetMuscle from "../../components/TargetMuscle";
 import { useState } from "react";
 import ExerciseList from "../../components/ExerciseList";
 
-const MuscleFocusScreen = ({}) => {
+const MuscleFocusScreen = () => {
   const { title } = useLocalSearchParams(); // ✅ get passed params
 
   const [activeTab, setActiveTab] = useState("ExerciseList"); 
@@ -44,7 +44,9 @@ const MuscleFocusScreen = ({}) => {
       />
       </View>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView 
+          showsVerticalScrollIndicator={false}
+      >
         {/* Main container  */}
         <View className="mx-5 gap-5 mt-3">
           {/* Difficulty level section  */}

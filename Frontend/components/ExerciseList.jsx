@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import React from 'react'
 import { useLocalSearchParams } from "expo-router";
 import ExerciseCard from "../components/ExerciseCard"
@@ -18,7 +18,7 @@ const ExerciseList = ({
       {showTitle && (<Text className="font-Medium text-title ">{title}</Text>)}
 
       {/* Exercise List Section  */}
-      <View className="flex-col gap-3">
+      <FlatList className="flex-col gap-3">
       <ExerciseCard
       />
       <ExerciseCard
@@ -51,7 +51,7 @@ const ExerciseList = ({
             muscleGroup="Shoulders"
             difficultyLevel="Advanced"
       />
-      </View>
+      </FlatList>
     </View>
   )
 }

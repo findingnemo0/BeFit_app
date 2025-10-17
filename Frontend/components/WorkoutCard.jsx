@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Profile = () => {
+const WorkoutCard = () => {
   return (
     <View>
-      <Text>profile</Text>
+      <Text>WorkoutCard</Text>
     </View>
   )
 }
 
-export default Profile
+export default WorkoutCard

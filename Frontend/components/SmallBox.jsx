@@ -8,20 +8,17 @@ const SmallBox = ({
   isSelectable = false, // if true it will acts like a filter toggle
   isActiveInitially = false, // initial state for toogle mode
   navigateTo = " ", // screen name to navigate , used only if not selectable
+  isActive ,
   width = null,
   padding = null,
-  onSelect = () => {}, // callback for parent when slected
+  onPress  = () => {}, // callback for parent when slected
 }) => {
   const navigation = useNavigation();
-  const [isActive, setIsActive] = useState(isActiveInitially);
 
-  const handlePress = () => {
+   const handlePress = () => {
     if (isSelectable) {
-      // toggle state
-      setIsActive(!isActive);
-      onSelect(title, !isActive);
+      onPress(title);
     } else if (navigateTo) {
-      // navigate to other screen
       navigation.navigate(navigateTo);
     }
   };
@@ -34,7 +31,8 @@ const SmallBox = ({
         paddingHorizontal: padding || 14,
         height: 30,
         backgroundColor: isActive ? "#1D1D1F" : "#FEFEFE",
-        borderRadius: 6,
+        borderRadius: 8,
+        borderWidth:1.5,
         borderColor: isActive ? "#1D1D1F" : "#EEEEEE",
         justifyContent: "center",
         alignItems: "center",
