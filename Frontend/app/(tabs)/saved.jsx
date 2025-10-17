@@ -50,7 +50,10 @@ const Saved = () => {
       >
         {/* Main Container  */}
         <View className="mx-5">
-          <ExerciseCollection/>
+          <ExerciseCollection
+                title="Collection name"
+                exerciseNo="12"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

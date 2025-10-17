@@ -18,7 +18,7 @@ const ExerciseList = ({
       {showTitle && (<Text className="font-Medium text-title ">{title}</Text>)}
 
       {/* Exercise List Section  */}
-      <FlatList className="flex-col gap-3">
+      <View className="flex-col gap-3">
       <ExerciseCard
       />
       <ExerciseCard
@@ -51,7 +51,7 @@ const ExerciseList = ({
             muscleGroup="Shoulders"
             difficultyLevel="Advanced"
       />
-      </FlatList>
+      </View>
     </View>
   )
 }
